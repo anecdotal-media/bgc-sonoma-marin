@@ -7,7 +7,7 @@
 <title>Sonoma-Marin Story Snapshot</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Montserrat:wght@400;500;600;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;600;700;800&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700;900&display=swap">
 <style>
   :root {
     --black: #000000;
@@ -17,10 +17,12 @@
     --green: #5A9567;
     --blue: #077CAA;
     --cream: #FFFCE8;
-    --cream-deep: #F5EFD3;
-    --rule: rgba(0,0,0,0.14);
-    --display: 'Outfit', 'Helvetica Neue', Arial, sans-serif;
-    --body: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    --cream-deep: #F7F4E1;
+    --divider: #EAE6D1;
+    --rule: #EAE6D1;
+    --display: 'Funnel Display', 'Helvetica Neue', Arial, sans-serif;
+    --serif: 'Libre Caslon Text', Georgia, 'Times New Roman', serif;
+    --body: 'Gotham', 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     color-scheme: light;
   }
   * { box-sizing: border-box; }
@@ -45,11 +47,13 @@
     margin: 0 0 18px;
   }
   .dark .label { color: var(--red-light); }
-  h1, h2, h3 { font-family: var(--display); font-weight: 300; margin: 0; text-wrap: balance; letter-spacing: -0.02em; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; letter-spacing: -0.02em; }
   h1 { font-size: clamp(40px, 6.4vw, 78px); line-height: 1.02; }
   h2 { font-size: clamp(32px, 4.6vw, 54px); line-height: 1.06; max-width: 22ch; }
-  h3 { font-size: 22px; font-weight: 400; line-height: 1.25; }
-  h1 strong, h2 strong { font-weight: 700; }
+  h3 { font-family: var(--serif); font-size: 21px; font-weight: 400; line-height: 1.3; letter-spacing: 0; }
+  h1 strong, h2 strong { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+  h2 strong { color: var(--red); }
+  .dark h2 strong { color: var(--red-light); }
   .lede { font-size: 18px; max-width: 60ch; margin: 28px 0 0; color: var(--ink-soft); }
   .dark .lede { color: rgba(255,252,232,0.78); }
   p { margin: 0; }
@@ -164,15 +168,15 @@
   .work-card h3 { color: var(--cream); font-size: 19px; }
   .work-card p { font-size: 13.5px; color: rgba(255,252,232,0.72); }
   .work-tag { font-size: 10px; font-weight: 900; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red-light); }
-  .takeaway { margin-top: 48px; font-family: var(--display); font-size: clamp(22px, 2.6vw, 30px); font-weight: 300; line-height: 1.3; max-width: 36ch; }
-  .takeaway strong { font-weight: 700; color: var(--red-light); }
+  .takeaway { margin-top: 48px; font-family: var(--serif); font-size: clamp(21px, 2.4vw, 28px); font-weight: 400; line-height: 1.3; max-width: 36ch; }
+  .takeaway strong { font-style: italic; font-weight: 400; color: var(--red-light); }
 
   /* BGC proof */
   .quote-row { display: flex; gap: 32px; align-items: flex-start; margin-top: 48px; }
   .quote-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; flex: none; border: 4px solid var(--cream); box-shadow: 0 0 0 2px var(--red); }
   @media (max-width: 600px) { .quote-row { flex-direction: column; gap: 20px; } .quote-photo { width: 96px; height: 96px; } }
   .quote { margin: 0; padding: 0; max-width: 58ch; }
-  .quote p { font-family: var(--display); font-weight: 300; font-size: clamp(22px, 2.5vw, 29px); line-height: 1.38; }
+  .quote p { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(22px, 2.5vw, 29px); line-height: 1.38; }
   .quote p::before { content: '\201C'; color: var(--red); font-weight: 700; margin-right: 2px; }
   .quote p::after { content: '\201D'; color: var(--red); font-weight: 700; margin-left: 2px; }
   .quote footer { margin-top: 20px; font-size: 13px; }
@@ -443,8 +447,9 @@
       </div>
       <div class="proof-card">
         <p class="label" style="margin: 0">Boys &amp; Girls Club of Cooke County</p>
-        <h3>A story video for the Club</h3>
-        <div class="asset-slot">Cooke County video goes here<br><span class="draft-note">Draft: add link and one-line context</span></div>
+        <h3>A staff and kids interview video</h3>
+        <p class="body-copy" style="font-size:14px">We interviewed staff and Club kids and cut it into a short story video. The Club premiered it at its first Casino Night fundraiser, which raised $15,000.</p>
+        <a class="btn" style="margin-top:4px;align-self:flex-start" href="https://vimeo.com/1130028689/d61a5aff87" target="_blank" rel="noopener">Watch the video</a>
       </div>
     </div>
   </div>
@@ -488,9 +493,8 @@
       <div>
         <h2>Healdsburg Crush is October 11. <strong>Let’s make sure people see it.</strong></h2>
         <p class="lede">We’d like to run a free, 60-minute Scroll Test workshop with your team before the event. No pitch deck. Just your feed, your stories, and a plan your staff can shoot on their phones.</p>
-        <a class="btn" href="#">Book a 20-minute call</a>
+        <a class="btn" href="https://zcal.co/ryanmcneill/free30minsession" target="_blank" rel="noopener">Book a 30-minute call</a>
         <p class="contact">Or email Ryan directly: <span>ryan.m@anecdotal.media</span></p>
-        <span class="draft-note">Draft: add Anecdotal booking link</span>
       </div>
       <div class="offer-box">
         <h3>In the workshop</h3>
